@@ -1,21 +1,21 @@
 import React from 'react';
-import { NavLink,Link,useNavigate } from 'react-router';
+import { NavLink, Link, useNavigate } from 'react-router';
 import FastTrackLogo from '../Logo/FastTrackLogo';
 import useAuth from '../../../hooks/useAuth';
 
 const Navbar = () => {
-  const { user,logOut } = useAuth() || {};
-   const navigate = useNavigate()
-  
-  const handleLogOut=()=>{
+  const { user, logOut } = useAuth() || {};
+  const navigate = useNavigate()
+
+  const handleLogOut = () => {
 
     logOut()
-    .then(() => {
-      console.log("User logged out successfully");
-      navigate('/login');
-    })
-    .catch(error => console.error(error));
-  
+      .then(() => {
+        console.log("User logged out successfully");
+        navigate('/login');
+      })
+      .catch(error => console.error(error));
+
   }
 
   const navItems = (
@@ -28,7 +28,11 @@ const Navbar = () => {
         user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
 
       }
+
+      <li><NavLink to="/beARider">Be A Rider</NavLink></li>
+
     </>
+
   );
 
   return (
@@ -68,9 +72,9 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        {user ? 
-        <button onClick={handleLogOut} className='btn btn-primary text-white'>LogOut</button>
-              :<Link to='/login' className='btn btn-primary text-white'>Login</Link>}
+        {user ?
+          <button onClick={handleLogOut} className='btn btn-primary text-white'>LogOut</button>
+          : <Link to='/login' className='btn btn-primary text-white'>Login</Link>}
       </div>
     </div>
   );
