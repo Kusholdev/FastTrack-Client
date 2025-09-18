@@ -29,26 +29,26 @@ const BeARider = () => {
         .map((s) => s.district);
 
     const onSubmit = async (data) => {
-        // const riderData = {
-        //     ...data,
-        //     name: user?.displayName || "",
-        //     email: user?.email || "",
-        //     status: "pending",
-        //     created_at: new Date().toISOString(),
-        // };
+        const riderData = {
+            ...data,
+            name: user?.displayName || "",
+            email: user?.email || "",
+            status: "pending",
+            created_at: new Date().toISOString(),
+        };
 
         console.log("Rider Application:", riderData);
 
-        // axiosSecure.post('/riders', riderData)
-        //     .then(res => {
-        //         if(res.data.insertedId){
-        //             Swal.fire({
-        //                 icon: "success",
-        //                 title: "Application Submitted!",
-        //                 text: "Your application is pending approval.",
-        //             });
-        //         }
-        //     })
+        axiosSecure.post('/riders', riderData)
+            .then(res => {
+                if(res.data.insertedId){
+                    Swal.fire({
+                        icon: "success",
+                        title: "Application Submitted!",
+                        text: "Your application is pending approval.",
+                    });
+                }
+            })
 
 
 
@@ -172,7 +172,7 @@ const BeARider = () => {
                     ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary text-black w-full mt-4">
+                <button type="submit" className="btn bg-[#CAEB66] w-full mt-4">
                     Submit Rider Application
                 </button>
             </form>

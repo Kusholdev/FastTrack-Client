@@ -1,5 +1,5 @@
 import React from 'react';
- import {NavLink, Outlet } from 'react-router';
+import { NavLink, Outlet } from 'react-router';
 import FastTrackLogo from '../pages/shared/Logo/FastTrackLogo';
 // import ProFastLogo from '../pages/shared/ProFastLogo/ProFastLogo';
 // import { FaHome, FaBoxOpen, FaMoneyCheckAlt, FaUserEdit, FaSearchLocation, FaUserCheck, FaUserClock, FaUserShield, FaMotorcycle, FaTasks, FaCheckCircle, FaWallet } from 'react-icons/fa';
@@ -8,7 +8,7 @@ import FastTrackLogo from '../pages/shared/Logo/FastTrackLogo';
 const DashBoardLayout = () => {
 
     // const { role, roleLoading } = useUserRole();
-    
+
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -52,7 +52,7 @@ const DashBoardLayout = () => {
                             Home
                         </NavLink>
                     </li>
-                     <li>
+                    <li>
                         <NavLink to="/dashboard/myParcels">
                             {/* <FaBoxOpen className="inline-block mr-2" /> */}
                             My Parcels
@@ -76,6 +76,18 @@ const DashBoardLayout = () => {
                             Update Profile
                         </NavLink>
                     </li> *
+                    <li>
+                        <NavLink to="/dashboard/active-riders">
+                            {/* <FaUserCheck className="inline-block mr-2" /> */}
+                            Active Riders
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dashboard/pending-riders">
+                            {/* <FaUserClock className="inline-block mr-2" /> */}
+                            Pending Riders
+                        </NavLink>
+                    </li>
                     {/* rider links */}
                     {/* {!roleLoading && role === 'rider' && <>
                         <li>
