@@ -21,9 +21,9 @@ const Register = () => {
         console.log(result.user);
 
         // update userInfo in the database
-            
+            const email =data.email;
         const userInfo ={
-          data:data.email,
+          email:email,
           role:'user',  //default
           created_at:new Date().toISOString(),
           last_logged_in:new Date().toISOString()

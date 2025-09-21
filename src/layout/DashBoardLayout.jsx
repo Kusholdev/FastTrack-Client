@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router';
 import FastTrackLogo from '../pages/shared/Logo/FastTrackLogo';
+import useUserRole from '../hooks/useUserRole';
 // import ProFastLogo from '../pages/shared/ProFastLogo/ProFastLogo';
 // import { FaHome, FaBoxOpen, FaMoneyCheckAlt, FaUserEdit, FaSearchLocation, FaUserCheck, FaUserClock, FaUserShield, FaMotorcycle, FaTasks, FaCheckCircle, FaWallet } from 'react-icons/fa';
 // import useUserRole from '../hooks/useUserRole';
@@ -8,6 +9,7 @@ import FastTrackLogo from '../pages/shared/Logo/FastTrackLogo';
 const DashBoardLayout = () => {
 
     // const { role, roleLoading } = useUserRole();
+    const{role,roleLoading}=useUserRole();
 
     return (
         <div className="drawer lg:drawer-open">
@@ -76,18 +78,7 @@ const DashBoardLayout = () => {
                             Update Profile
                         </NavLink>
                     </li> *
-                    <li>
-                        <NavLink to="/dashboard/active-riders">
-                            {/* <FaUserCheck className="inline-block mr-2" /> */}
-                            Active Riders
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/pending-riders">
-                            {/* <FaUserClock className="inline-block mr-2" /> */}
-                            Pending Riders
-                        </NavLink>
-                    </li>
+                    
                     {/* rider links */}
                     {/* {!roleLoading && role === 'rider' && <>
                         <li>
@@ -112,34 +103,34 @@ const DashBoardLayout = () => {
 
 
                     {/* admin link */}
-                    {/* {!roleLoading && role === 'admin' &&
+                    {!roleLoading && role === 'admin' &&
                         <>
                             <li>
                                 <NavLink to="/dashboard/assign-rider">
-                                    <FaMotorcycle className="inline-block mr-2" />
+                                    {/* <FaMotorcycle className="inline-block mr-2" /> */}
                                     Assign Rider
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/active-riders">
-                                    <FaUserCheck className="inline-block mr-2" />
+                                    {/* <FaUserCheck className="inline-block mr-2" /> */}
                                     Active Riders
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/pending-riders">
-                                    <FaUserClock className="inline-block mr-2" />
+                                    {/* <FaUserClock className="inline-block mr-2" /> */}
                                     Pending Riders
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/makeAdmin">
-                                    <FaUserShield className="inline-block mr-2" />
+                                    {/* <FaUserShield className="inline-block mr-2" /> */}
                                     Make Admin
                                 </NavLink>
                             </li>
                         </>
-                    } */}
+                    }
                 </ul>
             </div>
         </div>

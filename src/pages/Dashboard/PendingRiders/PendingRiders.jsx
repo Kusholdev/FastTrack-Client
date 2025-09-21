@@ -30,7 +30,7 @@ const PendingRiders = () => {
         });
 
         if (!confirm.isConfirmed) return;
-
+    
         try {
             const status = action === "approve" ? "active" : "rejected"
             await axiosSecure.patch(`/riders/${id}/status`, {
