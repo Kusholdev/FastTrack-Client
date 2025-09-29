@@ -80,26 +80,26 @@ const DashBoardLayout = () => {
                     </li> *
                     
                     {/* rider links */}
-                    {/* {!roleLoading && role === 'rider' && <>
+                    {!roleLoading && role === 'rider' && <>
                         <li>
                             <NavLink to="/dashboard/pending-deliveries">
-                                <FaTasks className="inline-block mr-2" />
+                                {/* <FaTasks className="inline-block mr-2" /> */}
                                 Pending Deliveries
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/completed-deliveries">
-                                <FaCheckCircle className="inline-block mr-2" />
+                                {/* <FaCheckCircle className="inline-block mr-2" /> */}
                                 Completed Deliveries
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to="/dashboard/my-earnings">
-                                <FaWallet className="inline-block mr-2" />
+                                {/* <FaWallet className="inline-block mr-2" /> */}
                                 My Earnings
                             </NavLink>
                         </li>
-                    </>} */}
+                    </>}
 
 
                     {/* admin link */}
